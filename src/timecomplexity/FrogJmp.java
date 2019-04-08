@@ -1,4 +1,4 @@
-package timeComplexity;
+package timecomplexity;
 
 public class FrogJmp {
 
