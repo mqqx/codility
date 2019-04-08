@@ -6,8 +6,8 @@ import java.util.stream.Stream;
 public class BinaryGap {
 	public static void main(String[] args) {
 		BinaryGap binaryGap = new BinaryGap();
-		int[] positiveIntegersToCheckLongestBinaryGap = new int[]{1, 5, 32, 529, 1041};
-		int[] expected = new int[]{0, 1, 0, 4, 5};
+		int[] positiveIntegersToCheckLongestBinaryGap = {1, 5, 32, 529, 1041};
+		int[] expected = {0, 1, 0, 4, 5};
 
 		int[] loopActual = new int[expected.length];
 		int[] streamActual = new int[expected.length];
