@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class OddOccurrencesInArray {
 
     public static void main(String[] args) {
+		// create an object of this class to have easy access to the solution method without modifying its definition
         OddOccurrencesInArray oddOccurrencesInArray = new OddOccurrencesInArray();
 
     	int[] arrayToTest = {9, 3, 9, 3, 9, 7, 9, 7, 7, 7, 7};

@@ -7,6 +7,7 @@ import java.util.List;
 public class CyclicRotation {
 
 	public static void main(String[] args) {
+		// create an object of this class to have easy access to the solution method without modifying its definition
 		CyclicRotation cyclicRotation = new CyclicRotation();
 
 		List<Integer> numberOfRotationsToTest = Arrays.asList(0, 1, 3, 26);

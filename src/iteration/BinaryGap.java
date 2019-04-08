@@ -5,6 +5,7 @@ import java.util.stream.Stream;
 
 public class BinaryGap {
 	public static void main(String[] args) {
+		// create an object of this class to have easy access to the solution method without modifying its definition
 		BinaryGap binaryGap = new BinaryGap();
 		int[] positiveIntegersToCheckLongestBinaryGap = {1, 5, 32, 529, 1041};
 		int[] expected = {0, 1, 0, 4, 5};
