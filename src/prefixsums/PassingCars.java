@@ -27,9 +27,7 @@ public class PassingCars {
 
 			if (car == 0) {
 				numberOfCarsTravelingEast++;
-			}
-
-			if (numberOfCarsTravelingEast > 0 && car == 1) {
+			} else if (numberOfCarsTravelingEast > 0) {
 				countOfPairs += numberOfCarsTravelingEast;
 				if (countOfPairs > MAX_NUMBER_OF_PAIRS_PASSING) {
 					return -1;
