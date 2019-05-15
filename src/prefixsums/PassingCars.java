@@ -20,7 +20,7 @@ public class PassingCars {
 	}
 
 	public int solution(int[] passingCars) {
-		int countOfPairs = 0;
+		int numberOfPairs = 0;
 		int numberOfCarsTravelingEast = 0;
 
 		for (int car : passingCars) {
@@ -28,12 +28,12 @@ public class PassingCars {
 			if (car == 0) {
 				numberOfCarsTravelingEast++;
 			} else if (numberOfCarsTravelingEast > 0) {
-				countOfPairs += numberOfCarsTravelingEast;
-				if (countOfPairs > MAX_NUMBER_OF_PAIRS_PASSING) {
+				numberOfPairs += numberOfCarsTravelingEast;
+				if (numberOfPairs > MAX_NUMBER_OF_PAIRS_PASSING) {
 					return -1;
 				}
 			}
 		}
-		return countOfPairs;
+		return numberOfPairs;
 	}
 }
