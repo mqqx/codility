@@ -24,7 +24,7 @@ public class GenomicRangeQuery {
 
 		for (int i = 0; i < queryFrom.length; i++) {
 
-			String subDnaSequence = dnaSequence.substring(queryFrom[i], queryTo[i]);
+			String subDnaSequence = dnaSequence.substring(queryFrom[i], queryTo[i] + 1);
 
 			int lowestImpactFactor = 4;
 			for (int j = 0; j < subDnaSequence.length(); j++) {
