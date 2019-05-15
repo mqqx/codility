@@ -24,9 +24,7 @@ public class MaxCounters {
 
 		int highestCounter = 0;
 		int lastHighestToFill = 0;
-		for (int i = 0; i < operations.length; i++) {
-			int operation = operations[i];
-
+		for (int operation : operations) {
 			if (operation > numberOfCounters) {
 				if (highestCounter > 0) {
 					lastHighestToFill = highestCounter;
