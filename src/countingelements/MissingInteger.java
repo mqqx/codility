@@ -29,6 +29,8 @@ public class MissingInteger {
 
 		int numberOfDistinctPositiveValues = distinctPositiveValues.size();
 
+		// +1 needs to be added to numberOfDistinctPositiveValues, because the distinctPositiveValues array,
+		// could be a numerical sequence without missing integers
 		for (int i = 1; i <= numberOfDistinctPositiveValues + 1; i++) {
 			if (!distinctPositiveValues.contains(i)) {
 				return i;
