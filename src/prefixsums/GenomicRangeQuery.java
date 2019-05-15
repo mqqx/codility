@@ -26,25 +26,18 @@ public class GenomicRangeQuery {
 
 			String subDnaSequence = dnaSequence.substring(queryFrom[i], queryTo[i] + 1);
 
-			int lowestImpactFactor = 4;
+			char lowestNucleotide = 'T';
 			for (int j = 0; j < subDnaSequence.length(); j++) {
 				char nucleotide = subDnaSequence.charAt(j);
 
-				switch (nucleotide) {
-					case 'A':
-						lowestImpactFactor = 1;
+				if (nucleotide < lowestNucleotide) {
+					lowestNucleotide = nucleotide;
+					if (lowestNucleotide == 'A') {
 						break;
-					case 'C':
-						if (lowestImpactFactor > 2) {
-							lowestImpactFactor = 2;
-						}
-					case 'G':
-						if (lowestImpactFactor > 3) {
-							lowestImpactFactor = 3;
-						}
+					}
 				}
 			}
-			lowestImpactFactors[i] = lowestImpactFactor;
+			lowestImpactFactors[i] = lowestNucleotide == 'A' ? 1 : lowestNucleotide == 'C' ? 2 : lowestNucleotide == 'G' ? 3 : 4;
 		}
 		return lowestImpactFactors;
 	}
